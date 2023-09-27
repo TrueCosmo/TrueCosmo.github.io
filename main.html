@@ -14,7 +14,6 @@
 
     <style>
         body {
-            background-color: #0f0f0f; /* Set the background color to dark gray */
             margin: 0;
             padding: 0;
             height: 100vh;
@@ -23,7 +22,8 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            position: relative; /* Add position relative to the body */
+            position: relative;
+            background-color: #0f0f0f; /* Set the background color to dark gray */
         }
 
         .label-container {
@@ -33,15 +33,17 @@
             background-position: center;
             padding: 20px;
             border-radius: 10px;
-            width: 300px; /* Adjust the width as needed */
-            height: 200px; /* Adjust the height as needed */
+            width: 300px;
+            height: 200px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            opacity: 1; /* Set opacity to 1 to make the image visible */
+            transition: opacity 2s ease-in-out; /* Add a transition for smooth opacity change */
         }
 
         .button-container {
             position: absolute;
-            bottom: 10px; /* Adjust the bottom position as needed */
-            right: 10px; /* Adjust the right position as needed */
+            bottom: 10px;
+            right: 10px;
         }
 
         .theme-button {
@@ -57,9 +59,15 @@
         .theme-button:hover {
             background-color: #333; /* Darken the button on hover */
         }
+
+        /* Add a class to control the background color change */
+        .fade-in-background {
+            background-color: #0f0f0f; /* Set the final background color */
+        }
     </style>
 </head>
 <body>
+    <!-- Wrap the background and image inside a container -->
     <div class="label-container"></div>
     <div class="button-container">
         <button class="theme-button" onclick="window.location.href='https://discord.gg/7jnbF22Mqp'">Join Clan</button>
